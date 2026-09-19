@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="mock.css">
+</head>
+<body>
+
+    <div class="game-container">
+
+        <h1> Number Guessing Game</h1>
+
+        <p class="description">
+            Guess the randomly generated number between
+            <strong>1 and 100</strong>.
+        </p>
+
+        <!-- Game Area -->
+        <div id="gameArea">
+
+            <label for="guessInput">Enter your guess:</label>
+
+            <div class="input-area">
+                <input
+                    type="number"
+                    id="guessInput"
+                    placeholder="Enter a number"
+                    min="1"
+                    max="100"
+                    autocomplete="off"
+                >
+
+                <button id="submitButton">Guess</button>
+            </div>
+
+            <p id="feedback" class="feedback">
+                Make your first guess!
+            </p>
+
+            <div class="stats">
+                <div>
+                    <span>Attempts</span>
+                    <strong id="attemptsDisplay">0</strong>
+                </div>
+
+                <div>
+                    <span>Best Score</span>
+                    <strong id="bestScore">-</strong>
+                </div>
+            </div>
+
+            <div class="previous-section">
+                <h2>Previous Guesses</h2>
+                <ul id="previousGuesses"></ul>
+            </div>
+
+        </div>
+
+        <!-- Game Over Area -->
+        <div id="gameOverArea" class="hidden">
+            <div class="success-icon"></div>
+
+            <h2>Congratulations!</h2>
+
+            <p id="finalMessage"></p>
+
+            <button id="resetButton">Play Again</button>
+        </div>
+
+    </div>
+
+    <script src="mock.js"></script>
+</body>
+</html>
